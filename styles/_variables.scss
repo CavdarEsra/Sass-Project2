@@ -1,0 +1,21 @@
+$darkBlue: #111B47;
+$lightBlue:#F3F5FF;
+$dark: #000;
+$light: #fff;
+
+.container{
+    margin-left: 168px;
+    padding-top: 200px;
+}
+.container2{
+    margin-left: 168px;
+    margin-right: 168px;
+    padding-top: 200px;
+}
+
+// @mixin display($display:flex,$align-items:normal,$justify-content:flex-start,$flex:row){
+//     display:$display;
+//     align-items: $align-items;
+//     justify-content: $justify-content;
+//     flex-direction: $flex;
+// }

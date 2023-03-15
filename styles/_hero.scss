@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'media-queries';
+
+%btn{
+    padding: 3px 20px;
+}
+
+.hero {
+    height: 1000px;
+
+    &__content{
+        width:400px;
+        height:400px;
+        position: absolute;
+        z-index: 100;
+        @include sm{
+            width: 300px;
+            margin: auto;
+        }
+        @include lg{
+            height: 800px;
+         }
+        &--btn1 {
+            @extend %btn;
+            margin-right: 20px;
+            background-color: $darkBlue;
+            color: $light;
+        }
+        &--btn2{
+            @extend %btn;
+            background-color: $light;
+            color: $darkBlue;
+        }
+        h1{
+            font-size: 30px;
+            letter-spacing: 0.1rem;
+            margin-bottom: 20px;
+            color: $darkBlue;
+        }
+        p{
+            color: $darkBlue;
+            font-weight:lighter ;
+            margin-bottom: 20px;
+            font-size: medium;
+        }
+    }
+    &__design{
+        display: flex;
+        align-content: space-between;
+        justify-content: flex-end;
+        align-items: center;
+
+        &--img{
+            margin-top: -100px;
+            z-index: 5;
+            @include lg{
+               opacity: 0.3;
+            }
+        }
+        &--path{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+}

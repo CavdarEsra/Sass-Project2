@@ -1,0 +1,193 @@
+@import 'variables';
+@import 'media-queries';
+%i{
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+%container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 168px;
+    margin-right: 168px;
+}
+%h1{
+    font-size: 30px;
+    color: $darkBlue;
+    margin-bottom: 20px;
+}
+%p{
+    font-size: small;
+    color: $darkBlue;
+    margin-bottom: 20px;
+}
+
+.section1{
+    height: 800px;
+    padding-top: 200px;
+
+    &__container{
+       @extend %container;
+       @include md{
+            flex-direction: column;
+            margin-bottom: 50px
+        }
+       img{
+        @include lg{
+            width: 400px;
+            height: 400px;
+        }
+        @include md{
+            width: 500px;
+            height: 500px;
+            z-index: -5;
+            margin-bottom: 50px;
+        }
+       }
+    }
+    &__left{
+        width: 500px;
+        
+        &--cards{
+            display: flex;
+        }
+
+        &--card1{
+            @extend %i;
+      
+        }
+        &--card2{
+            @extend %i;
+        }
+      
+        h1{
+           @extend %h1;
+        }
+        p{
+            @extend %p;
+        }
+    }
+    &__right{ 
+        margin-top:-100px;
+    
+    }
+}
+
+.section2{
+    height: 600px;
+
+    &__container{
+        @extend %container;
+        @include md{
+            flex-direction: column;
+            margin-bottom: 50px;
+            margin-top: 150px;
+        }
+    }
+    &__left{
+        img{
+            margin-top: -50px;
+            width: 500px;
+            height: 400px;
+       
+            @include lg{
+                width: 450px;
+                height: 350px;
+            }
+            @include md{
+                z-index: -5;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__right{
+        width: 600px;
+        h1{
+            @extend %h1;
+        }
+        p{
+            @extend %p;
+        }
+    }
+}
+
+.section3{
+    height: 600px;
+
+    &__container{
+        @extend %container;
+        @include md{
+            flex-direction: column;
+            margin-bottom: 50px;
+            margin-top: 150px;
+        }
+    }
+    &__left{
+        img{
+            margin-top: -50px;
+            width: 500px;
+            height: 400px;
+            @include lg{
+                width: 450px;
+                height: 350px;
+            }
+            @include md{
+                z-index: -5;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__right{
+        width: 600px;
+        h1{
+            @extend %h1;
+        }
+        p{
+            @extend %p;
+        }
+    }
+}
+
+.section4{
+    height: 600px;
+
+    &__container{
+        @extend %container;
+        @include md{
+            flex-direction: column;
+            margin-bottom: 50px;
+            margin-top: 150px;
+        }
+    }
+    &__left{
+        img{
+            margin-top: -50px;
+            width: 500px;
+            height: 400px;
+            @include lg{
+                width: 450px;
+                height: 350px;
+            }
+            @include md{
+                z-index: -5;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__right{
+        width: 600px;
+        h1{
+            @extend %h1;
+        }
+        p{
+            @extend %p;
+        }
+        &--button{
+            padding: 3px 20px;
+            margin-top: 30px;
+            background-color: $darkBlue;
+            color: $light;
+        }
+    }
+}

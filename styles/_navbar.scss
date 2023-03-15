@@ -1,0 +1,69 @@
+@import 'variables';
+@import 'media-queries';
+
+%align-center{
+    display: flex;
+    align-items: center;
+}
+
+.navbar{    
+    height: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    
+    //@include display(flex,center,space-between);
+    @include lg{
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    @include sm{
+    flex-direction: column;
+    padding-top: 20px;
+    }
+
+    &__menu{
+      @extend %align-center;
+      list-style: none;
+      text-align: center;
+      z-index: 10;
+      @include sm{
+        margin: auto;
+        padding-bottom: 15px;
+        }
+      &--links{
+        color: $darkBlue;
+        padding-right: 40px;
+      }
+    }
+
+    &__logo{
+        @extend %align-center;
+        justify-content: center;
+        font-family: 'Tilt Warp', cursive;
+        font-size: 25px;
+        color: $darkBlue;
+        z-index: 3;
+    }
+    
+    &__button{
+        @extend %align-center;
+        height: 15px;
+        padding: 10px 40px;
+        margin: 25px;
+        background-color: $darkBlue;
+        color: $light;
+        z-index: 5;
+        @include sm{
+          width: 120px;
+          padding: 10px 30px 10px 30px;
+          margin: auto;
+          margin-top: 20px;
+          text-align: center;
+
+        }
+    }
+}
+

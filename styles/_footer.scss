@@ -1,0 +1,89 @@
+@import 'variables';
+@import 'media-queries';
+
+%flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.footer{
+    .footer1{
+    &__content{
+        margin:3rem 1rem ;
+        padding-bottom: 150px;
+        padding-top: 150px;
+        margin: auto;
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include sm{
+            width: 500px;
+        }
+
+        p{
+            color: $darkBlue;
+        }
+        p:nth-child(2){
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 40px;
+            
+        }
+        p:nth-child(3){
+            font-size: 40px;
+            font-weight: bold;
+        }
+        p:nth-child(5){
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }  
+        button{
+            padding: 3px 20px;
+            background-color: $darkBlue;
+            color: $light;
+        }  
+    }
+    }
+
+    .footer2{
+        &__content{
+            padding: 4rem 3rem;
+            &--top{
+                @extend %flex;
+                padding-bottom: 50px;
+                button{
+                    padding: 3px 15px;
+                    background-color: $darkBlue;
+                    color: $light;
+                }
+                span{
+                    opacity: 0.6;
+                }
+            }
+            &--bottom{
+                @extend %flex;
+                margin-top: 30px;
+                margin-bottom: 100px;
+                ul{
+                    display: flex;
+                    gap: 30px;
+                    li{
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.background-top{
+    background-image: url("/images/Rectangle.png");
+}
+.background-bottom{
+    background-image: url("/images/Rectangle2.png");
+    height: auto;
+}
