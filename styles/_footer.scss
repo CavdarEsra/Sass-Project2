@@ -1,12 +1,14 @@
 @import 'variables';
 @import 'media-queries';
 
-%flex{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-between;
-}
+//! extends
+// .flex{
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content:space-between;
+// }
+//kullanım şekli:  @extend .flex;  (% veya .)
 
 .footer{
     .footer1{
@@ -16,10 +18,7 @@
         padding-top: 150px;
         margin: auto;
         width: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include display(flex,center,center,column);
         @include sm{
             width: 500px;
         }
@@ -31,7 +30,6 @@
             text-align: center;
             padding: 20px;
             margin-bottom: 40px;
-            
         }
         p:nth-child(3){
             font-size: 40px;
@@ -53,7 +51,7 @@
         &__content{
             padding: 4rem 3rem;
             &--top{
-                @extend %flex;
+                @include display(flex,center,space-between,row);
                 padding-bottom: 50px;
                 button{
                     padding: 3px 15px;
@@ -65,7 +63,7 @@
                 }
             }
             &--bottom{
-                @extend %flex;
+                @include display(flex,center,space-between,row);
                 margin-top: 30px;
                 margin-bottom: 100px;
                 ul{

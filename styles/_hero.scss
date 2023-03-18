@@ -1,16 +1,20 @@
 @import 'variables';
 @import 'media-queries';
 
-%btn{
+//extend
+.btn{
     padding: 3px 20px;
 }
+//kullanım şekli: @extend .btn;
 
 .hero {
     height: 1000px;
 
+    .container{
+        padding-top: 35rem;
+    }
     &__content{
-        width:400px;
-        height:400px;
+        @include size(400px, 400px);
         position: absolute;
         z-index: 100;
         @include sm{
@@ -21,13 +25,13 @@
             height: 800px;
          }
         &--btn1 {
-            @extend %btn;
+            @extend .btn;
             margin-right: 20px;
             background-color: $darkBlue;
             color: $light;
         }
         &--btn2{
-            @extend %btn;
+            @extend .btn;
             background-color: $light;
             color: $darkBlue;
         }
@@ -49,10 +53,12 @@
         align-content: space-between;
         justify-content: flex-end;
         align-items: center;
+        
 
         &--img{
-            margin-top: -100px;
+            position: absolute;
             z-index: 5;
+            right: 0px;
             @include lg{
                opacity: 0.3;
             }

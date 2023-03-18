@@ -1,46 +1,46 @@
 @import 'variables';
 @import 'media-queries';
-%i{
+
+//extends-------------------
+.i{
     font-size: 25px;
-    margin-bottom: 10px;
-    width: 300px;
+    margin-bottom: 1rem;
+    width: 50rem;
 }
-%container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.container{
+    @include display(flex,center,space-between);  //mixin
     margin-left: 168px;
     margin-right: 168px;
 }
-%h1{
+.h1{
     font-size: 30px;
     color: $darkBlue;
     margin-bottom: 20px;
 }
-%p{
+.p{
     font-size: small;
     color: $darkBlue;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
+//-----------------------------
 
 .section1{
     height: 800px;
     padding-top: 200px;
 
     &__container{
-       @extend %container;
+       @extend .container;
        @include md{
             flex-direction: column;
             margin-bottom: 50px
         }
        img{
         @include lg{
-            width: 400px;
-            height: 400px;
+           @include size(400px, 400px);
         }
         @include md{
-            width: 500px;
-            height: 500px;
+            @include size(500px, 500px);
             z-index: -5;
             margin-bottom: 50px;
         }
@@ -54,18 +54,18 @@
         }
 
         &--card1{
-            @extend %i;
+            @extend .i;
       
         }
         &--card2{
-            @extend %i;
+            @extend .i;
         }
       
         h1{
-           @extend %h1;
+           @extend .h1;
         }
         p{
-            @extend %p;
+            @extend .p;
         }
     }
     &__right{ 
@@ -78,7 +78,7 @@
     height: 600px;
 
     &__container{
-        @extend %container;
+        @extend .container;
         @include md{
             flex-direction: column;
             margin-bottom: 50px;
@@ -104,10 +104,10 @@
     &__right{
         width: 600px;
         h1{
-            @extend %h1;
+            @extend .h1;
         }
         p{
-            @extend %p;
+            @extend .p;
         }
     }
 }
@@ -116,7 +116,7 @@
     height: 600px;
 
     &__container{
-        @extend %container;
+        @extend .container;
         @include md{
             flex-direction: column;
             margin-bottom: 50px;
@@ -129,8 +129,7 @@
             width: 500px;
             height: 400px;
             @include lg{
-                width: 450px;
-                height: 350px;
+                @include size(450px, 350px);
             }
             @include md{
                 z-index: -5;
@@ -141,19 +140,20 @@
     &__right{
         width: 600px;
         h1{
-            @extend %h1;
+            @extend .h1;
         }
         p{
-            @extend %p;
+            @extend .p;
         }
     }
 }
-
 .section4{
     height: 600px;
-
+    @include md{
+        margin-bottom: 15rem;
+    }
     &__container{
-        @extend %container;
+        @extend .container;
         @include md{
             flex-direction: column;
             margin-bottom: 50px;
@@ -163,11 +163,10 @@
     &__left{
         img{
             margin-top: -50px;
-            width: 500px;
-            height: 400px;
+            @include size(500px, 400px);
+
             @include lg{
-                width: 450px;
-                height: 350px;
+                @include size(450px, 350px);
             }
             @include md{
                 z-index: -5;
@@ -178,10 +177,10 @@
     &__right{
         width: 600px;
         h1{
-            @extend %h1;
+            @extend .h1;
         }
         p{
-            @extend %p;
+            @extend .p;
         }
         &--button{
             padding: 3px 20px;

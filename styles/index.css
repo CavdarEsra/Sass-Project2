@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
 }
 
 a {
@@ -13,7 +12,7 @@ li {
   list-style-type: none;
 }
 
-.container {
+.container, .section4__container, .section3__container, .section2__container, .section1__container {
   margin-left: 168px;
   padding-top: 200px;
 }
@@ -24,7 +23,7 @@ li {
   padding-top: 200px;
 }
 
-.navbar__button, .navbar__logo, .navbar__menu {
+.align-center, .navbar__button, .navbar__logo, .navbar__menu {
   display: flex;
   align-items: center;
 }
@@ -89,7 +88,21 @@ li {
   }
 }
 
-.container {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container, .section4__container, .section3__container, .section2__container, .section1__container {
   margin-left: 168px;
   padding-top: 200px;
 }
@@ -100,12 +113,15 @@ li {
   padding-top: 200px;
 }
 
-.hero__content--btn2, .hero__content--btn1 {
+.btn, .hero__content--btn2, .hero__content--btn1 {
   padding: 3px 20px;
 }
 
 .hero {
   height: 1000px;
+}
+.hero .container, .hero .section4__container, .hero .section3__container, .hero .section2__container, .hero .section1__container {
+  padding-top: 35rem;
 }
 .hero__content {
   width: 400px;
@@ -152,8 +168,9 @@ li {
   align-items: center;
 }
 .hero__design--img {
-  margin-top: -100px;
+  position: absolute;
   z-index: 5;
+  right: 0px;
 }
 @media screen and (max-width: 1200px) {
   .hero__design--img {
@@ -167,7 +184,21 @@ li {
   z-index: 2;
 }
 
-.container {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container, .section4__container, .section3__container, .section2__container, .section1__container {
   margin-left: 168px;
   padding-top: 200px;
 }
@@ -178,30 +209,31 @@ li {
   padding-top: 200px;
 }
 
-.section1__left--card2, .section1__left--card1 {
+.i, .section1__left--card2, .section1__left--card1 {
   font-size: 25px;
-  margin-bottom: 10px;
-  width: 300px;
+  margin-bottom: 1rem;
+  width: 50rem;
 }
 
-.section4__container, .section3__container, .section2__container, .section1__container {
+.container, .section4__container, .section3__container, .section2__container, .section1__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: "row";
   margin-left: 168px;
   margin-right: 168px;
 }
 
-.section4__right h1, .section3__right h1, .section2__right h1, .section1__left h1 {
+.h1, .section4__right h1, .section3__right h1, .section2__right h1, .section1__left h1 {
   font-size: 30px;
   color: #111B47;
   margin-bottom: 20px;
 }
 
-.section4__right p, .section3__right p, .section2__right p, .section1__left p {
+.p, .section4__right p, .section3__right p, .section2__right p, .section1__left p {
   font-size: small;
   color: #111B47;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .section1 {
@@ -302,6 +334,11 @@ li {
   height: 600px;
 }
 @media screen and (max-width: 992px) {
+  .section4 {
+    margin-bottom: 15rem;
+  }
+}
+@media screen and (max-width: 992px) {
   .section4__container {
     flex-direction: column;
     margin-bottom: 50px;
@@ -335,7 +372,21 @@ li {
   color: #fff;
 }
 
-.container {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container, .section1__container, .section2__container, .section3__container, .section4__container {
   margin-left: 168px;
   padding-top: 200px;
 }
@@ -346,13 +397,6 @@ li {
   padding-top: 200px;
 }
 
-.footer .footer2__content--bottom, .footer .footer2__content--top {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .footer .footer1__content {
   margin: 3rem 1rem;
   padding-bottom: 150px;
@@ -360,9 +404,9 @@ li {
   margin: auto;
   width: 700px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 @media screen and (max-width: 768px) {
   .footer .footer1__content {
@@ -394,6 +438,10 @@ li {
   padding: 4rem 3rem;
 }
 .footer .footer2__content--top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   padding-bottom: 50px;
 }
 .footer .footer2__content--top button {
@@ -405,6 +453,10 @@ li {
   opacity: 0.6;
 }
 .footer .footer2__content--bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   margin-top: 30px;
   margin-bottom: 100px;
 }

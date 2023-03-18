@@ -2,6 +2,39 @@ $darkBlue: #111B47;
 $lightBlue:#F3F5FF;
 $dark: #000;
 $light: #fff;
+//$font-family: "Arial";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    //font-family: $font-family;
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+
+//! Mixins--------------------------------------
+@mixin display($display, $align-items, $justify-content, $flex:"row"){
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex;
+}
+//kullanma şekli:   @include display(flex,center,space-between,column);
+
+
+@mixin size($width, $height) {
+ width: $width;
+ height: $height;
+}
+//kullanma şekli:   @include size(100%, 100vh);
+
+//!-------------------------------------------------
 
 .container{
     margin-left: 168px;
@@ -13,9 +46,3 @@ $light: #fff;
     padding-top: 200px;
 }
 
-// @mixin display($display:flex,$align-items:normal,$justify-content:flex-start,$flex:row){
-//     display:$display;
-//     align-items: $align-items;
-//     justify-content: $justify-content;
-//     flex-direction: $flex;
-// }

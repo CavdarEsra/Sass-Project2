@@ -1,10 +1,13 @@
 @import 'variables';
 @import 'media-queries';
 
-%align-center{
+
+// extends
+.align-center{
     display: flex;
     align-items: center;
 }
+// @extend .align-center;
 
 .navbar{    
     height: 80px;
@@ -14,8 +17,8 @@
     justify-content: space-between;
     padding: 0.5rem calc((100vw - 1200px) / 2);
     
-    //@include display(flex,center,space-between);
-    @include lg{
+    
+    @include lg{ //mixin çağırması
       padding-right: 30px;
       padding-left: 30px;
     }
@@ -25,7 +28,7 @@
     }
 
     &__menu{
-      @extend %align-center;
+      @extend .align-center;
       list-style: none;
       text-align: center;
       z-index: 10;
@@ -40,7 +43,7 @@
     }
 
     &__logo{
-        @extend %align-center;
+        @extend .align-center;
         justify-content: center;
         font-family: 'Tilt Warp', cursive;
         font-size: 25px;
@@ -49,7 +52,7 @@
     }
     
     &__button{
-        @extend %align-center;
+        @extend .align-center;
         height: 15px;
         padding: 10px 40px;
         margin: 25px;
@@ -62,7 +65,6 @@
           margin: auto;
           margin-top: 20px;
           text-align: center;
-
         }
     }
 }
