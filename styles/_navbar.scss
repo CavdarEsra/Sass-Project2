@@ -45,7 +45,7 @@
     &__logo{
         @extend .align-center;
         justify-content: center;
-        font-family: 'Tilt Warp', cursive;
+        font-family: 'Tilt Warp', cursive ;
         font-size: 25px;
         color: $darkBlue;
         z-index: 3;

@@ -1,14 +1,15 @@
+
 $darkBlue: #111B47;
 $lightBlue:#F3F5FF;
 $dark: #000;
 $light: #fff;
-//$font-family: "Arial";
+$font-family: 'Roboto', sans-serif;
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    //font-family: $font-family;
+    font-family: $font-family;
 }
 a {
     text-decoration: none;
