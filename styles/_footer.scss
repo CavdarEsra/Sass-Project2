@@ -11,7 +11,7 @@
 //kullanım şekli:  @extend .flex;  (% veya .)
 
 .footer{
-    .footer1{
+    .footerTop{
     &__content{
         margin:3rem 1rem ;
         padding-bottom: 150px;
@@ -47,28 +47,43 @@
     }
     }
 
-    .footer2{
+    .footerBottom{
         &__content{
             padding: 4rem 3rem;
             &--top{
                 @include display(flex,center,space-between,row);
                 padding-bottom: 50px;
+                @include sm{
+                    @include display(flex,center,space-between,column);
+                }
                 button{
                     padding: 3px 15px;
                     background-color: $darkBlue;
                     color: $light;
+                    @include sm{
+                        margin-top: 1rem;
+                    }
                 }
                 span{
                     opacity: 0.6;
+                    @include sm{
+                        margin-bottom: 1rem;
+                    }
                 }
             }
             &--bottom{
                 @include display(flex,center,space-between,row);
                 margin-top: 30px;
                 margin-bottom: 100px;
+                @include sm{
+                    @include display(flex,center,space-between,column);
+                }
                 ul{
                     display: flex;
                     gap: 30px;
+                    @include sm{
+                        margin-bottom:1rem;
+                    }
                     li{
                         opacity: 0.6;
                     }

@@ -7,7 +7,7 @@
 }
 //kullanım şekli: @extend .btn;
 
-.hero {
+.introductory {
     height: 1000px;
 
     .container{
@@ -24,13 +24,13 @@
         @include lg{
             height: 800px;
          }
-        &--btn1 {
+        &--purchaseButton {
             @extend .btn;
             margin-right: 20px;
             background-color: $darkBlue;
             color: $light;
         }
-        &--btn2{
+        &--learnMoreButton{
             @extend .btn;
             background-color: $light;
             color: $darkBlue;
@@ -48,7 +48,7 @@
             font-size: medium;
         }
     }
-    &__design{
+    &__background{
         display: flex;
         align-content: space-between;
         justify-content: flex-end;
