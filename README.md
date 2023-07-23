@@ -1,5 +1,4 @@
-# Sass-Project2
-# SassProject 
+# Sass Project2
 ## Used Technologies 
 * HTML
 * SCSS
